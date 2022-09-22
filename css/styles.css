@@ -111,17 +111,11 @@ adress {
     display: flex;
     margin-left: 93px;
 }
-
 .site-nav .item {
     margin-right: 50px;
 }
-
-.site-nav .item:last-child {
-    margin-right: 0px;
-}
-
 .site-nav .link {
-    display: block;
+    display: block;    
     padding-top: 32px;
     padding-bottom: 32px;
     color: var(--primary-text-color);
@@ -131,15 +125,29 @@ adress {
     /*  Задаём значения перехода  */
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
+.site-nav .link.current {
+    position: relative;
+    color: var(--accent-color);
+}
+.item .current::after {
+    display: block;
+    position: absolute;
+    /*bottom: 0;*/
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    } 
+.site-nav .item:last-child {
+    margin-right: 0px;
+}
 
 /* При ховере меняем значения анимируемых свойств */
 .site-nav .link:hover,
 .site-nav .link:focus {
-    color: var(--accent-color);
-}
-.site-nav .link.current {
     color: var(--accent-color);
 }
  
