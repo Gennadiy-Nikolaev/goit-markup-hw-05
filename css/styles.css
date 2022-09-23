@@ -63,6 +63,30 @@ a,
 adress {
     text-decoration: none;
 }
+/*Розмітка сторінки*/
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1200px;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.container-footer {
+    display: flex;
+    align-items: baseline;
+    width: 507px;
+    justify-content: space-between;
+}
+
+.container-footer:last-child {
+    margin-right: 0px;
+}
 
 /*Стиль logotype*/
 .logotype {
@@ -318,7 +342,6 @@ adress {
 
 /*What do we do*/
 .main-box {
-    /* margin-bottom: 94px; */
     padding-top: 0;
 }
 .box {
@@ -355,7 +378,7 @@ adress {
     background: rgba(47, 48, 58, 0.8);        
 }
 .text-label {
-    display:block;      
+    display: block;      
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;    
@@ -363,6 +386,7 @@ adress {
     text-transform: uppercase;    
     color: var(--text-color);
 }
+
 
 /*Our team*/
 .team {
@@ -539,7 +563,7 @@ adress {
     gap: 30px;
     margin-top: 50px;
 }
-.group {
+.groupe-list {
     flex-basis: calc((100% - 60px) / 3);
     position: relative;
 }
@@ -550,41 +574,46 @@ adress {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.thumb {
+.groupe-thumb {
     display: block;
     position: relative; 
-    overflow: hidden;   
+    overflow: hidden; 
+    outline: 1px solid red;  
 }
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    /*height: 100%;*/
-    padding: 0 24px;
-    display: flex;
-    align-items: center;
-
+    bottom: 0;
+    height: 100%;
+    width: 100%;  
     background-color: rgb(33, 150, 243, 0.9);
+    outline: 1px solid orange;
+    opacity: 0;
     transform: translateY(100%);
-    transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} 
+.overlay:hover {
+    opacity: 1;
+    transform: translateY(0);
 }
-.thumb::before {
+.text-overlay {
+    display: block;
+
+}
+/*.groupe-thumb::before {
     position: absolute;
     content: "";
     width: 100%;
     height: 100%;
     background-color: rgb(33, 150, 243,0.9);
     opacity: 0;
-    /*transform: translateY(100%);*/         
+    /*transform: translateY(100%);         
     }
-    /*Hover to ::before*/
-.thumb:hover::before {
+    /*Hover to ::before
+.groupe-thumb:hover::before {
     opacity: 1;
     transform: translateY(0);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}    
+}    */
 
 .project .link:hover,
 .project .link:focus {
@@ -739,25 +768,4 @@ contact {
 .ellips:hover svg,
 .ellips:focus svg {
     fill: var(--primary-background-color);
-}
-
-/*Розмітка сторінки*/
-.container {
-    padding-top: 94px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 1200px;
-}
-
-.container-footer {
-    display: flex;
-    align-items: baseline;
-    width: 507px;
-    justify-content: space-between;
-}
-
-.container-footer:last-child {
-    margin-right: 0px;
 }
