@@ -593,13 +593,14 @@ adress {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.groupe-thumb {
+/*Репета*/
+/*.groupe-thumb {
     display: flex;
     position: relative; 
     overflow: hidden;    
     align-items: center;
     justify-content: center;
-    /*outline: 1px solid red;*/  
+    outline: 1px solid red;  
 }
 .groupe-thumb::before{
     display: inline-block;
@@ -620,24 +621,24 @@ adress {
 .groupe-thumb:hover::before {
     opacity: 1;
     transform: translateY(0);
-}
+}*/
 
-.overlay {
+/*.overlay {
     position: absolute;
     /*Центровка через tt*/
     /*top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);*/    
+    transform: translate(-50%,-50%);
     height: 100%;
     width: 100%; 
-    /*outline: 1px solid orange;*/
+    /*outline: 1px solid orange;
     opacity: 0;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(100%)
-} 
+} */
 
-.text-overlay {
+/*.text-overlay {
     display: block;
     padding: 63px 24px;
     font-weight: 400;
@@ -645,7 +646,7 @@ adress {
     line-height: 1.55;           
     color:var(--text-color);
 }
-/*.groupe-thumb::before {
+.groupe-thumb::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -659,7 +660,32 @@ adress {
     transform: translateY(0);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}*/   
+}*/
+/*Маша Падалко*/
+ .groupe-thumb {
+    position: relative;
+    overflow: hidden;    
+ }
+ .text-overlay {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--text-color);
+    padding: 63px 24px;
+    outline: 1px solid palevioletred;
+    background: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ .groupe-list:hover .text-overlay {
+    transform: translateY(0);
+ }
 
 .project .link:hover,
 .project .link:focus {
