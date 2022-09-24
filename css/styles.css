@@ -361,20 +361,18 @@ adress {
     max-width: 100%;
     height: auto;
 }
-.box-list {
+
+/*.box-thumb {
     position: relative;
+    /*outline: 1px solid orange;
 }
-.box-thumb {
-    position: relative;
-    /*outline: 1px solid orange;*/
-}
-.label {
+/*.label {
     position: absolute;
     padding: 27px 0;
     width: 100%;
     height: 70px;
     bottom: 0%;
-    /*outline: 1px solid red;*/
+    /*outline: 1px solid red;
     background: rgba(47, 48, 58, 0.8);        
 }
 .text-label {
@@ -385,9 +383,30 @@ adress {
     text-align: center;
     text-transform: uppercase;    
     color: var(--text-color);
+}*/
+
+/*Вариант Маши Падалко*/
+.box-thumb {
+    position: relative;
+    outline: 1px solid orange;
 }
-
-
+.text-label {
+    display: block;
+    position: absolute;
+    padding: 27px 0;
+    height: 70px;
+    width: 100%;
+    bottom: 0;
+      
+    font-weight: 700;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-size: 14px;
+    background: rgba(47, 48, 58, 0.8);
+    outline: 1px solid blueviolet;
+}     
 /*Our team*/
 .team {
     background-color: var(--background-color);
@@ -624,7 +643,6 @@ adress {
     font-weight: 400;
     font-size: 18px;
     line-height: 1.55;           
-    letter-spacing: 0.03em;
     color:var(--text-color);
 }
 /*.groupe-thumb::before {
