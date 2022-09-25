@@ -63,6 +63,10 @@ a,
 adress {
     text-decoration: none;
 }
+button {
+    border: none;
+}
+
 /*Розмітка сторінки*/
 .container {
     margin-left: auto;
@@ -135,11 +139,13 @@ adress {
     display: flex;
     margin-left: 93px;
 }
+
 .site-nav .item {
     margin-right: 50px;
 }
+
 .site-nav .link {
-    display: block;    
+    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
     color: var(--primary-text-color);
@@ -150,21 +156,24 @@ adress {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
+}
+
 .site-nav .link.current {
     position: relative;
     color: var(--accent-color);
 }
+
 .item .current::after {
     display: block;
     position: absolute;
     bottom: 0;
-    content: "";
+    content: '';
     width: 100%;
     height: 4px;
     background-color: var(--accent-color);
     border-radius: 2px;
-    } 
+}
+
 .site-nav .item:last-child {
     margin-right: 0px;
 }
@@ -174,14 +183,14 @@ adress {
 .site-nav .link:focus {
     color: var(--accent-color);
 }
- 
+
 /*Mail+tel*/
 /*Auth-nav*/
 
 .auth-nav {
     display: flex;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    /* padding-top: 32px;
+  padding-bottom: 32px; */
     margin-left: auto;
     align-items: center;
 }
@@ -198,11 +207,13 @@ adress {
     line-height: 1.14;
     letter-spacing: 0.02em;
     align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
     /*  Задаём значения перехода  */
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
+}
 
 .auth-nav .tel {
     display: flex;
@@ -212,11 +223,14 @@ adress {
     line-height: 1.14;
     letter-spacing: 0.02em;
     align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
     /*  Задаём значения перехода  */
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    }
+}
+
 .mail-svg {
     fill: var(--secondary-text-color);
     margin-right: 10px;
@@ -240,23 +254,26 @@ adress {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .mail:hover,
 .mail:focus {
     color: var(--accent-color);
 }
+
 .mail:hover svg,
 .mail:focus svg {
     fill: var(--accent-color);
 }
+
 .tel:hover,
 .tel:focus {
     color: var(--accent-color);
 }
+
 .tel:hover svg,
 .tel:focus svg {
     fill: var(--accent-color);
 }
-
 
 /*Hero*/
 .hero {
@@ -292,9 +309,11 @@ adress {
     display: flex;
     justify-content: center;
 }
+
 .feature .item {
     margin-right: 30px;
 }
+
 .feature .item::before {
     display: flex;
     content: '';
@@ -305,21 +324,27 @@ adress {
     background-color: var(--primary-button-color);
     margin-bottom: 30px;
 }
+
 .item.icon-antenna::before {
     background-image: url(../images/feature/antenna.svg);
 }
+
 .item.icon-clock::before {
     background-image: url(../images/feature/clock.svg);
 }
+
 .item.icon-diagram::before {
     background-image: url(../images/feature/diagram.svg);
 }
+
 .item.icon-astronaut::before {
     background-image: url(../images/feature/astronaut.svg);
 }
+
 .feature .item:last-child {
     margin-right: 0px;
 }
+
 .feature .title {
     margin-top: 0;
     margin-bottom: 10px;
@@ -344,10 +369,12 @@ adress {
 .main-box {
     padding-top: 0;
 }
+
 .box {
     display: flex;
     justify-content: space-between;
 }
+
 .section-title {
     margin-bottom: 50px;
     color: var(--primary-text-color);
@@ -356,40 +383,17 @@ adress {
     line-height: 1.16;
     text-align: center;
 }
+
 .image {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
-/*.box-thumb {
-    position: relative;
-    /*outline: 1px solid orange;
-}
-/*.label {
-    position: absolute;
-    padding: 27px 0;
-    width: 100%;
-    height: 70px;
-    bottom: 0%;
-    /*outline: 1px solid red;
-    background: rgba(47, 48, 58, 0.8);        
-}
-.text-label {
-    display: block;      
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;    
-    text-align: center;
-    text-transform: uppercase;    
-    color: var(--text-color);
-}*/
-
-/*Вариант Маши Падалко*/
 .box-thumb {
     position: relative;
-    outline: 1px solid orange;
 }
+
 .text-label {
     display: block;
     position: absolute;
@@ -397,7 +401,6 @@ adress {
     height: 70px;
     width: 100%;
     bottom: 0;
-      
     font-weight: 700;
     line-height: 1.14;
     text-align: center;
@@ -405,22 +408,29 @@ adress {
     color: var(--text-color);
     font-size: 14px;
     background: rgba(47, 48, 58, 0.8);
-    outline: 1px solid blueviolet;
-}     
+}
+
 /*Our team*/
 .team {
     background-color: var(--background-color);
 }
+
+.teamtext-overlay {
+    background-color: var(--background-color);
+}
+
 .team-card {
     display: flex;
     justify-content: space-between;
 }
+
 .team-card .item {
     background-color: var(--primary-background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
+
 .team-title {
     margin-top: 0;
     margin-bottom: 50px;
@@ -430,6 +440,7 @@ adress {
     line-height: 1.16;
     text-align: center;
 }
+
 .team-card .title {
     color: var(--primary-text-color);
     font-weight: 500;
@@ -437,6 +448,7 @@ adress {
     line-height: 1.18;
     text-align: center;
 }
+
 .team-card .post {
     margin-top: 10px;
     margin-bottom: 16px;
@@ -447,15 +459,18 @@ adress {
     line-height: 1.18;
     text-align: center;
 }
+
 .teamcard-social {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
 .team-social {
     display: flex;
     justify-content: center;
     gap: 10px;
 }
+
 .ellipse {
     display: flex;
     align-items: center;
@@ -465,10 +480,11 @@ adress {
     background-color: var(--primary-background-color);
     border-radius: 50%;
     /*  Задаём значения перехода  */
-    transition-property: background-color; 
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .ellipse-svg {
     height: 20px;
     width: 20px;
@@ -478,10 +494,12 @@ adress {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .ellipse:hover,
 .ellipse:focus {
     background-color: var(--accent-color);
 }
+
 .ellipse:hover svg,
 .ellipse:focus svg {
     fill: var(--primary-background-color);
@@ -515,7 +533,7 @@ adress {
     min-width: 73px;
     padding: 6px 22px;
     /*  Задаём значения перехода  */
-    transition-property: color, background-color, box-shadow; 
+    transition-property: color, background-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -576,128 +594,64 @@ adress {
 .portfolio {
     padding-bottom: 94px;
 }
+
 .project {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 50px;
 }
+
 .groupe-list {
     flex-basis: calc((100% - 60px) / 3);
     position: relative;
 }
+
 .project .link {
-    display: block;    
-    /*  Задаём значения перехода  */
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-/*Репета*/
-/*.groupe-thumb {
-    display: flex;
-    position: relative; 
-    overflow: hidden;    
-    align-items: center;
-    justify-content: center;
-    outline: 1px solid red;  
-}
-.groupe-thumb::before{
-    display: inline-block;
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color: rgb(33, 150, 243, 0.9);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(100%)
-}
-.groupe-thumb:hover .overlay {
-    opacity: 1;
-    transform: translateY(0);
-}
-.groupe-thumb:hover::before {
-    opacity: 1;
-    transform: translateY(0);
-}*/
-
-/*.overlay {
-    position: absolute;
-    /*Центровка через tt*/
-    /*top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: 100%;
-    width: 100%; 
-    /*outline: 1px solid orange;
-    opacity: 0;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(100%)
-} */
-
-/*.text-overlay {
     display: block;
-    padding: 63px 24px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.55;           
-    color:var(--text-color);
 }
-.groupe-thumb::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgb(33, 150, 243,0.9);
-    opacity: 0;
-    transform: translateY(100%);         
-    }   
-.groupe-thumb:hover::before {
-    opacity: 1;
-    transform: translateY(0);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}*/
-/*Маша Падалко*/
- .groupe-thumb {
+
+.groupe-thumb {
     position: relative;
-    overflow: hidden;    
- }
- .text-overlay {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.55;
-    color: var(--text-color);
-    padding: 63px 24px;
-    outline: 1px solid palevioletred;
-    background: rgba(33, 150, 243, 0.9);
-    transform: translateY(100%);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
- }
- .groupe-list:hover .text-overlay {
-    transform: translateY(0);
- }
+    overflow: hidden;
+}
 
 .project .link:hover,
 .project .link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
+
+.text-overlay {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--text-color);
+    padding: 63px 24px;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.9);
+    transform: translateY(100%);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.groupe-list:hover .text-overlay {
+    transform: translateY(0);
+}
+
 .project .item {
     padding: 20px 24px;
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
+
 .project .title {
     margin-bottom: 4px;
 
@@ -707,6 +661,7 @@ adress {
     line-height: 2;
     letter-spacing: 0.06em;
 }
+
 .project .post {
     margin-top: 0;
     margin-bottom: 0;
@@ -721,6 +676,7 @@ adress {
 .client {
     padding-bottom: 94px;
 }
+
 .client-title {
     margin-top: 0;
     margin-bottom: 50px;
@@ -731,10 +687,12 @@ adress {
     letter-spacing: 0.03em;
     color: #212121;
 }
+
 .client-card {
     display: flex;
     justify-content: space-between;
 }
+
 .client-card .logo {
     display: flex;
     width: 170px;
@@ -744,25 +702,26 @@ adress {
     align-items: center;
     justify-content: center;
     /*  Задаём значения перехода  */
-        transition-property: border;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
+    transition-property: border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .client-card .logo:hover,
 .client-card .logo:focus {
     border-color: #2196f3;
 }
+
 .client-card .logo-svg {
     width: 106px;
     height: 60px;
     fill: #afb1b8;
-/*  Задаём значения перехода  */
+    /*  Задаём значения перехода  */
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
 }
+
 .client-card .logo:hover svg,
 .client-card .logo:focus svg {
     fill: #2196f3;
@@ -774,21 +733,26 @@ adress {
     padding-bottom: 60px;
     background-color: var(--secondary-background-color);
 }
+
 contact {
     margin-top: 20px;
 }
+
 .contact .item {
     margin-bottom: 9px;
 }
+
 .contact .item:last-child {
     margin-bottom: 0px;
 }
+
 .contact .adres {
     color: var(--text-color);
     font-style: normal;
     font-weight: 400;
     line-height: 1.71;
 }
+
 .contact .link {
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
@@ -805,12 +769,14 @@ contact {
     line-height: 1.14;
     letter-spacing: 0.03em;
 }
+
 .social {
     display: flex;
     height: 44px;
     width: 206px;
     justify-content: space-between;
 }
+
 .ellips {
     display: flex;
     align-items: center;
@@ -819,25 +785,65 @@ contact {
     width: 44px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-/*  Задаём значения перехода  */
+    /*  Задаём значения перехода  */
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .ellips-svg {
     height: 20px;
     width: 20px;
     fill: var(--primary-background-color);
-/*  Задаём значения перехода  */
+    /*  Задаём значения перехода  */
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .ellips:hover,
 .ellips:focus {
     background-color: var(--accent-color);
 }
+
 .ellips:hover svg,
 .ellips:focus svg {
     fill: var(--primary-background-color);
+}
+/*Модальне вікно*/
+.backdrop {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+
+}
+.modal {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.is-hidden {
+    visibility: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.close-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 17px;
+    right: 17px;
+    color:#000000;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
 }
