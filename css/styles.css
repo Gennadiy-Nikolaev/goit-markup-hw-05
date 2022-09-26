@@ -63,6 +63,7 @@ a,
 adress {
     text-decoration: none;
 }
+
 button {
     border: none;
 }
@@ -166,7 +167,7 @@ button {
 .item .current::after {
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     content: '';
     width: 100%;
     height: 4px;
@@ -189,8 +190,6 @@ button {
 
 .auth-nav {
     display: flex;
-    /* padding-top: 32px;
-  padding-bottom: 32px; */
     margin-left: auto;
     align-items: center;
 }
@@ -295,7 +294,6 @@ button {
     margin-left: auto;
     margin-right: auto;
     width: 696px;
-
     color: var(--text-color);
     font-weight: 900;
     font-size: 44px;
@@ -348,7 +346,6 @@ button {
 .feature .title {
     margin-top: 0;
     margin-bottom: 10px;
-
     color: var(--primary-text-color);
     font-weight: 700;
     line-height: 1.14;
@@ -359,7 +356,6 @@ button {
 .feature .post {
     margin-top: 0;
     margin-bottom: 0;
-
     color: var(--secondary-text-color);
     font-weight: 400;
     line-height: 1.71;
@@ -480,19 +476,16 @@ button {
     background-color: var(--primary-background-color);
     border-radius: 50%;
     /*  Задаём значения перехода  */
-    transition-property: background-color;
+    /*transition-property: background-color;
     transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .ellipse-svg {
     height: 20px;
     width: 20px;
     fill: #afb1b8;
-    /*  Задаём значения перехода  */
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ellipse:hover,
@@ -532,10 +525,9 @@ button {
     text-align: center;
     min-width: 73px;
     padding: 6px 22px;
-    /*  Задаём значения перехода  */
-    transition-property: color, background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition: color,
+        background-color,
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.secondary {
@@ -549,10 +541,9 @@ button {
     text-align: center;
     min-width: 103px;
     padding: 6px 22px;
-    /*  Задаём значения перехода  */
-    transition-property: color, background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color,
+            background-color,
+            box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:active {
@@ -609,6 +600,14 @@ button {
 
 .project .link {
     display: block;
+    transition-property: box-shadow;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project .link:hover,
+.project .link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);    
 }
 
 .groupe-thumb {
@@ -616,13 +615,6 @@ button {
     overflow: hidden;
 }
 
-.project .link:hover,
-.project .link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
-}
 
 .text-overlay {
     position: absolute;
@@ -634,11 +626,10 @@ button {
     line-height: 1.55;
     color: var(--text-color);
     padding: 63px 24px;
-    height: 100%;
+    height: 101%;
     background: rgba(33, 150, 243, 0.9);
     transform: translateY(100%);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .groupe-list:hover .text-overlay {
@@ -665,7 +656,6 @@ button {
 .project .post {
     margin-top: 0;
     margin-bottom: 0;
-
     color: var(--secondary-text-color);
     font-weight: 400;
     font-size: 16px;
@@ -700,11 +690,8 @@ button {
     border: 1px solid #afb1b8;
     border-radius: 4px;
     align-items: center;
-    justify-content: center;
-    /*  Задаём значения перехода  */
-    transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    justify-content: center;    
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);    
 }
 
 .client-card .logo:hover,
@@ -715,11 +702,8 @@ button {
 .client-card .logo-svg {
     width: 106px;
     height: 60px;
-    fill: #afb1b8;
-    /*  Задаём значения перехода  */
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #afb1b8;      
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-card .logo:hover svg,
@@ -785,20 +769,14 @@ contact {
     width: 44px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    /*  Задаём значения перехода  */
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ellips-svg {
     height: 20px;
     width: 20px;
     fill: var(--primary-background-color);
-    /*  Задаём значения перехода  */
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ellips:hover,
@@ -810,16 +788,22 @@ contact {
 .ellips:focus svg {
     fill: var(--primary-background-color);
 }
+
 /*Модальне вікно*/
 .backdrop {
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
-    position: fixed;
-
+    opacity: 1;
+   /* visibility: visible;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
 }
+
 .modal {
     position: absolute;
     width: 528px;
@@ -827,23 +811,39 @@ contact {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: var(--text-color);
     border-radius: 4px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+       transform: scale(1, 1);
+}       
+.modal:hover {
+    transform: scale(1, -1);
+
 }
+
 .is-hidden {
     visibility: 0;
     opacity: 0;
     pointer-events: none;
 }
+
 .close-button {
     position: absolute;
     width: 30px;
     height: 30px;
-    top: 17px;
-    right: 17px;
-    color:#000000;
-    background: #FFFFFF;
+    top: 8px;
+    right: 8px;
+    background: var(--text-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+}
+
+.close-svg {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
