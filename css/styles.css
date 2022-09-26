@@ -153,10 +153,7 @@ button {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    /*  Задаём значения перехода  */
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link.current {
@@ -179,7 +176,6 @@ button {
     margin-right: 0px;
 }
 
-/* При ховере меняем значения анимируемых свойств */
 .site-nav .link:hover,
 .site-nav .link:focus {
     color: var(--accent-color);
@@ -208,10 +204,7 @@ button {
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    /*  Задаём значения перехода  */
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav .tel {
@@ -224,10 +217,7 @@ button {
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    /*  Задаём значения перехода  */
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-svg {
@@ -236,10 +226,7 @@ button {
     width: 18px;
     height: 20px;
     padding: 0;
-    /*  Задаём значения перехода  */
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tel-svg {
@@ -248,10 +235,7 @@ button {
     height: 20px;
     padding: 0;
     fill: var(--secondary-text-color);
-    /*  Задаём значения перехода  */
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail:hover,
@@ -476,9 +460,6 @@ button {
     background-color: var(--primary-background-color);
     border-radius: 50%;
     /*  Задаём значения перехода  */
-    /*transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ellipse-svg {
@@ -525,9 +506,7 @@ button {
     text-align: center;
     min-width: 73px;
     padding: 6px 22px;
-        transition: color,
-        background-color,
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color, background-color, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.secondary {
